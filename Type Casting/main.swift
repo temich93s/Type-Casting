@@ -66,3 +66,21 @@ for item in library {
  
 print("В Media библиотеке содержится \(movieCount) фильма и \(songCount) песни")
 // Выведет "В Media библиотеке содержится 2 фильма и 3 песни"
+
+
+//MARK: Понижающее приведение
+print("\n//Понижающее приведение")
+
+for item in library {
+    if let movie = item as? Movie {
+        print("Movie: \(movie.name), dir. \(movie.director)")
+    } else if let song = item as? Song {
+        print("Song: \(song.name), by \(song.artist)")
+    }
+}
+ 
+// Movie: Casablanca, dir. Michael Curtiz
+// Song: Blue Suede Shoes, by Elvis Presley
+// Movie: Citizen Kane, dir. Orson Welles
+// Song: The One And Only, by Chesney Hawkes
+// Song: Never Gonna Give You Up, by Rick Astley
