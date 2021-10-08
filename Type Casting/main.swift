@@ -48,3 +48,21 @@ let library = [
 print(type(of: library))
 print(type(of: library[0]))
 print(type(of: library[1]))
+
+
+//MARK: Проверка типа
+print("\n//Проверка типа")
+
+var movieCount = 0
+var songCount = 0
+ 
+for item in library {
+    if item is Movie {
+        movieCount += 1
+    } else if item is Song {
+        songCount += 1
+    }
+}
+ 
+print("В Media библиотеке содержится \(movieCount) фильма и \(songCount) песни")
+// Выведет "В Media библиотеке содержится 2 фильма и 3 песни"
